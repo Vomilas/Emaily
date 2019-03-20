@@ -28,6 +28,6 @@ passport.use(new GoogleStrategy({
         return done(null, existingUser);
     }
 
-    const user = await new User({ googleId: profile.id}).save()
+    const user = await new User({ googleId: profile.id}).save();
     done(null, user);
 }));
